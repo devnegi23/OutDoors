@@ -1,0 +1,95 @@
+/*
+Light-green:#7ed56f
+Medium-green:#55c57a
+Dark-green:#28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.headerOne {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(126, 213, 111, 0.8),
+      rgb(40, 180, 133, 0.8)
+    ),
+    url("../img/hero-small.jpeg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  height: 40px;
+  top: 40px;
+  left: 40px;
+}
+
+.heading_both {
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.primary_heading {
+  display: block;
+  letter-spacing: 60px;
+  font-size: 50px;
+  font-weight: 400;
+  animation: leftToRight 5s;
+  animation-timing-function: ease-out;
+}
+.secondary_heading {
+  display: block;
+  letter-spacing: 21px;
+  font-size: 25px;
+  font-weight: 400;
+  animation: rightToLeft 5s  ;
+  animation-timing-function: ease-out;
+
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
